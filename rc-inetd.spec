@@ -1,4 +1,4 @@
-# $Id: rc-inetd.spec,v 1.24 2001-07-25 16:30:59 saq Exp $
+# $Id: rc-inetd.spec,v 1.25 2001-07-26 05:42:23 saq Exp $
 Summary:	Wrapper for managing inet service using any kind inet aplication
 Summary(pl):	Skrypty do zarz±dzania inet serwisami
 Name:		rc-inetd
@@ -35,10 +35,20 @@ install rc-inetd.conf $RPM_BUILD_ROOT/etc/sysconfig
 gzip -9nf template_inetd template_service
 
 %post
-DESC="rc-inetd service"; %chkconfig_add
+/sbin/chkconfig --add rc-inetd
+if [ -f /var/lock/subsys/rc-inetd ]; then
+	/etc/rc.d/init.d/rc-inetd restart 1>&2
+else
+	echo "Run \"/etc/rc.d/init.d/rc-inetd start\" to start rc-inetd service."
+fi
 
 %preun
-%chkconfig_del
+if [ "$1" = "0" ]; then
+	if [ -f /var/lock/subsys/rc-inetd ]; then
+		/etc/rc.d/init.d/rc-inetd stop 1>&2
+	fi
+	/sbin/chkconfig --del rc-inetd
+fi
 
 %clean
 rm -rf $RPM_BUILD_ROOT
