@@ -1,9 +1,9 @@
-# $Id: rc-inetd.spec,v 1.40 2003-09-27 23:21:40 ankry Exp $
+# $Id: rc-inetd.spec,v 1.41 2003-11-24 12:27:50 averne Exp $
 Summary:	Wrapper for managing inet service using any kind inet daemon
 Summary(pl):	Skrypty do zarz±dzania us³ugami inet
 Name:		rc-inetd
 Version:	0.16
-Release:	2
+Release:	3
 License:	GPL
 Group:		Base
 Source0:	%{name}-%{version}.tar.bz2
