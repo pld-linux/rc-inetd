@@ -1,4 +1,3 @@
-# $Id: rc-inetd.spec,v 1.41 2003-11-24 12:27:50 averne Exp $
 Summary:	Wrapper for managing inet service using any kind inet daemon
 Summary(pl):	Skrypty do zarz±dzania us³ugami inet
 Name:		rc-inetd
