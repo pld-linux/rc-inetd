@@ -1,4 +1,4 @@
-# $Id: rc-inetd.spec,v 1.28 2002-11-30 23:00:26 juandon Exp $
+# $Id: rc-inetd.spec,v 1.29 2003-05-25 06:26:14 misi3k Exp $
 Summary:	Wrapper for managing inet service using any kind inet aplication
 Summary(pl):	Skrypty do zarz±dzania inet serwisami
 Name:		rc-inetd
