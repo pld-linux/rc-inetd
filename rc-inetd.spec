@@ -1,4 +1,4 @@
-# $Id: rc-inetd.spec,v 1.15 2000-03-28 16:55:06 baggins Exp $
+# $Id: rc-inetd.spec,v 1.16 2000-04-01 11:15:39 zagrodzki Exp $
 Summary:	Wrapper for managing inet service using any kind inet aplication
 Summary(pl):	Skrypty do zarz±dzania inet serwisami
 Name:		rc-inetd
@@ -10,7 +10,7 @@ Group(pl):	Bazowe
 Source:		ftp://ftp.pld.org.pl/software/rc-inetd/%{name}-%{version}.tar.bz2
 Requires:	inetdaemon
 BuildArch:	noarch
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Wrapper for managing inet service using any kind inet aplication.
