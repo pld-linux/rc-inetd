@@ -1,6 +1,6 @@
-# $Id: rc-inetd.spec,v 1.30 2003-05-25 11:00:58 malekith Exp $
-Summary:	Wrapper for managing inet service using any kind inet aplication
-Summary(pl):	Skrypty do zarz±dzania inet serwisami
+# $Id: rc-inetd.spec,v 1.31 2003-08-12 15:21:42 qboosh Exp $
+Summary:	Wrapper for managing inet service using any kind inet daemon
+Summary(pl):	Skrypty do zarz±dzania us³ugami inet
 Name:		rc-inetd
 Version:	0.14
 Release:	1
@@ -8,21 +8,21 @@ License:	GPL
 Group:		Base
 Source0:	ftp://ftp.pld.org.pl/software/rc-inetd/%{name}-%{version}.tar.bz2
 # Source0-md5: ee79925472952f8c8c19db3abb985d80
+PreReq:		rc-scripts
+Requires(post,preun):	/sbin/chkconfig
 Requires:	inetdaemon
-Prereq:		chkconfig
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Wrapper for managing inet service using any kind inet aplication.
+Wrapper for managing inet service using any kind inet daemon.
 
 %description -l pl
-Skrypty do zarz±dzania inet serwisami.
+Skrypty do zarz±dzania us³ugami inet przy u¿yciu dowolnego rodzaju
+demona inet.
 
 %prep
 %setup -q
-
-%build
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -30,6 +30,9 @@ install -d $RPM_BUILD_ROOT/etc/{rc.d/init.d,sysconfig/rc-inetd}
 
 install rc-inetd $RPM_BUILD_ROOT/etc/rc.d/init.d
 install rc-inetd.conf $RPM_BUILD_ROOT/etc/sysconfig
+
+%clean
+rm -rf $RPM_BUILD_ROOT
 
 %post
 /sbin/chkconfig --add rc-inetd
@@ -46,9 +49,6 @@ if [ "$1" = "0" ]; then
 	fi
 	/sbin/chkconfig --del rc-inetd
 fi
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
