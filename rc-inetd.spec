@@ -1,4 +1,4 @@
-# $Id: rc-inetd.spec,v 1.26 2002-01-18 02:14:47 kloczek Exp $
+# $Id: rc-inetd.spec,v 1.27 2002-02-22 23:29:40 kloczek Exp $
 Summary:	Wrapper for managing inet service using any kind inet aplication
 Summary(pl):	Skrypty do zarz±dzania inet serwisami
 Name:		rc-inetd
@@ -6,8 +6,6 @@ Version:	0.14
 Release:	1
 License:	GPL
 Group:		Base
-Group(de):	Gründsätzlich
-Group(pl):	Podstawowe
 Source0:	ftp://ftp.pld.org.pl/software/rc-inetd/%{name}-%{version}.tar.bz2
 Requires:	inetdaemon
 Prereq:		chkconfig
