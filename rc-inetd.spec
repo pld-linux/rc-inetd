@@ -1,13 +1,13 @@
-# $Id: rc-inetd.spec,v 1.35 2003-09-13 23:24:25 hunter Exp $
+# $Id: rc-inetd.spec,v 1.36 2003-09-18 22:32:26 hunter Exp $
 Summary:	Wrapper for managing inet service using any kind inet daemon
 Summary(pl):	Skrypty do zarz±dzania us³ugami inet
 Name:		rc-inetd
 Version:	0.15
-Release:	1
+Release:	2
 License:	GPL
 Group:		Base
 Source0:	%{name}-%{version}.tar.bz2
-# Source0-md5:	e9bc15da76d46c0df15f844758f7bd14
+# Source0-md5: 73b7695d263f48f3649955f760d09a30 
 PreReq:		rc-scripts
 Requires(post,preun):	/sbin/chkconfig
 Requires:	inetdaemon
