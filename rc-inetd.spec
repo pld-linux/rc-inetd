@@ -1,4 +1,4 @@
-# $Id: rc-inetd.spec,v 1.39 2003-09-26 13:38:07 ankry Exp $
+# $Id: rc-inetd.spec,v 1.40 2003-09-27 23:21:40 ankry Exp $
 Summary:	Wrapper for managing inet service using any kind inet daemon
 Summary(pl):	Skrypty do zarz±dzania us³ugami inet
 Name:		rc-inetd
@@ -41,7 +41,7 @@ rm -rf $RPM_BUILD_ROOT
 if [ -f /var/lock/subsys/rc-inetd ]; then
 	/etc/rc.d/init.d/rc-inetd restart 1>&2
 else
-	echo "Run \"/etc/rc.d/init.d/rc-inetd start\" to start rc-inetd service."
+	echo "Type \"/etc/rc.d/init.d/rc-inetd start\" to start rc-inetd service."
 fi
 
 %preun
