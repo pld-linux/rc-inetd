@@ -1,4 +1,4 @@
-# $Id: rc-inetd.spec,v 1.1 1999-09-02 07:44:43 kloczek Exp $
+# $Id: rc-inetd.spec,v 1.2 1999-09-02 07:47:42 kloczek Exp $
 Summary:	Wrapper for managing inet service using any kind inet aplication
 Summary(pl):	Skrypty do zarz±dzania inet serwisami
 Name:		rc-inetd
@@ -8,7 +8,8 @@ Copyright:	GPL
 Group:		Base
 Group(pl):	Bazowe
 Source:		%{name}-%{version}.tar.gz
-BuildPrereq:	inetdaemon
+Requires:	inetdaemon
+BuildArch:	noarch
 Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -29,7 +30,7 @@ install -d $RPM_BUILD_ROOT/etc/{rc.d/init.d,sysconfig/rc-inetd}
 install rc-inetd $RPM_BUILD_ROOT/etc/rc.d/init.d
 install rc-inetd.conf $RPM_BUILD_ROOT/etc/sysconfig
 
-%clear
+%clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
