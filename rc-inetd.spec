@@ -1,8 +1,8 @@
-# $Id: rc-inetd.spec,v 1.13 2000-03-01 17:35:26 kloczek Exp $
+# $Id: rc-inetd.spec,v 1.14 2000-03-28 13:11:40 baggins Exp $
 Summary:	Wrapper for managing inet service using any kind inet aplication
 Summary(pl):	Skrypty do zarz±dzania inet serwisami
 Name:		rc-inetd
-Version:	0.9
+Version:	0.10
 Release:	1
 License:	GPL
 Group:		Base
