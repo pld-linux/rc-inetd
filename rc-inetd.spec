@@ -1,9 +1,9 @@
-# $Id: rc-inetd.spec,v 1.4 1999-10-03 16:00:21 kloczek Exp $
+# $Id: rc-inetd.spec,v 1.5 1999-10-03 17:31:12 kloczek Exp $
 Summary:	Wrapper for managing inet service using any kind inet aplication
 Summary(pl):	Skrypty do zarz±dzania inet serwisami
 Name:		rc-inetd
 Version:	0.3
-Release:	1
+Release:	2
 Copyright:	GPL
 Group:		Base
 Group(pl):	Bazowe
@@ -37,3 +37,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,754)
 %attr(754,root,root) /etc/rc.d/init.d/rc-inetd
 %attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) /etc/sysconfig/rc-inetd.conf
+%dir /etc/sysconfig/rc-inetd
