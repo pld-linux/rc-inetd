@@ -1,4 +1,4 @@
-Summary:	Wrapper for managing inet service using any kind inet daemon
+Summary:	Wrapper for managing inet service using any kind of inet daemon
 Summary(pl):	Skrypty do zarz±dzania us³ugami inet
 Name:		rc-inetd
 Version:	0.16
