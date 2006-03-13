@@ -9,9 +9,9 @@ Source0:	%{name}-%{version}.tar.bz2
 # Source0-md5:	d0cd4c2d0ec24d4c57f87c183123d3f9
 Patch0:		%{name}.fix
 Patch1:		%{name}-noservices.patch
-PreReq:		rc-scripts
 Requires(post,preun):	/sbin/chkconfig
 Requires:	inetdaemon
+Requires:	rc-scripts
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -39,17 +39,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 /sbin/chkconfig --add rc-inetd
-if [ -f /var/lock/subsys/rc-inetd ]; then
-	/etc/rc.d/init.d/rc-inetd restart 1>&2
-else
-	echo "Type \"/etc/rc.d/init.d/rc-inetd start\" to start rc-inetd service."
-fi
+%service rc-inetd restart
 
 %preun
 if [ "$1" = "0" ]; then
-	if [ -f /var/lock/subsys/rc-inetd ]; then
-		/etc/rc.d/init.d/rc-inetd stop 1>&2
-	fi
+	%service rc-inetd stop
 	/sbin/chkconfig --del rc-inetd
 fi
 
