@@ -1,5 +1,5 @@
 Summary:	Wrapper for managing inet service using any kind of inet daemon
-Summary(pl):	Skrypty do zarz±dzania us≥ugami inet
+Summary(pl.UTF-8):   Skrypty do zarzƒÖdzania us≈Çugami inet
 Name:		rc-inetd
 Version:	0.16
 Release:	5
@@ -19,8 +19,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Wrapper for managing inet service using any kind inet daemon.
 
-%description -l pl
-Skrypty do zarz±dzania us≥ugami inet przy uøyciu dowolnego rodzaju
+%description -l pl.UTF-8
+Skrypty do zarzƒÖdzania us≈Çugami inet przy u≈ºyciu dowolnego rodzaju
 demona inet.
 
 %prep
