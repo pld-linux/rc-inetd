@@ -1,5 +1,5 @@
 Summary:	Wrapper for managing inet service using any kind of inet daemon
-Summary(pl.UTF-8):   Skrypty do zarządzania usługami inet
+Summary(pl.UTF-8):	Skrypty do zarządzania usługami inet
 Name:		rc-inetd
 Version:	0.16
 Release:	5
