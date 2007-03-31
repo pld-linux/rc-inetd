@@ -10,6 +10,7 @@ Source0:	%{name}-%{version}.tar.bz2
 Patch0:		%{name}.fix
 Patch1:		%{name}-noservices.patch
 Patch2:		%{name}-allow_manual_config.patch
+BuildRequires:	rpmbuild(macros) >= 1.268
 Requires(post,preun):	/sbin/chkconfig
 Requires:	inetdaemon
 Requires:	rc-scripts
