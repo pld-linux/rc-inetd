@@ -1,0 +1,3 @@
+- added templete* as %doc
+- fixed bug in rc-inetd
+- bzip2ed tarball
