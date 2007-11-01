@@ -1,0 +1,6 @@
+  Version 0.2 (bunch fixes):
+- in main script added missing deltext() (waszi),
+- SONFIG_FILE -> CONFIG_FILE nad INET_NAME -> PROCESS_NAME (waszi),
+- fixed stop and restart target (wiget),
+- solve name space colision (wiget),
+- fix show() message in main script (wiget).
