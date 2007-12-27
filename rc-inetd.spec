@@ -2,7 +2,7 @@ Summary:	Wrapper for managing inet service using any kind of inet daemon
 Summary(pl.UTF-8):	Skrypty do zarządzania usługami inet
 Name:		rc-inetd
 Version:	0.17
-Release:	1
+Release:	2
 License:	GPL
 Group:		Base
 Source0:	%{name}-%{version}.tar.bz2
