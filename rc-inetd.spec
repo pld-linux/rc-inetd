@@ -2,11 +2,12 @@ Summary:	Wrapper for managing inet service using any kind of inet daemon
 Summary(pl.UTF-8):	Skrypty do zarządzania usługami inet
 Name:		rc-inetd
 Version:	0.17
-Release:	2
+Release:	3
 License:	GPL
 Group:		Base
 Source0:	%{name}-%{version}.tar.bz2
 # Source0-md5:	7218ebe82d2755a8d5051bd9b3a1a221
+Patch0:		egrep.patch
 BuildRequires:	rpmbuild(macros) >= 1.268
 Requires(post,preun):	/sbin/chkconfig
 Requires:	inetdaemon
@@ -23,6 +24,7 @@ demona inet.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT

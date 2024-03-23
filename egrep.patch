@@ -1,0 +1,12 @@
+diff -urN rc-inetd-0.17.org/rc-inetd rc-inetd-0.17/rc-inetd
+--- rc-inetd-0.17.org/rc-inetd	2007-11-01 20:43:31.000000000 +0100
++++ rc-inetd-0.17/rc-inetd	2024-03-23 22:02:36.189978720 +0100
+@@ -34,7 +34,7 @@
+ 	exit 5
+ fi
+ 
+-SERVICES=$(ls -d /etc/sysconfig/rc-inetd/* 2>/dev/null | egrep -v '.*(\.rpm(save|new|orig)|~|CVS)')
++SERVICES=$(ls -d /etc/sysconfig/rc-inetd/* 2>/dev/null | grep -Ev '.*(\.rpm(save|new|orig)|~|CVS)')
+ 
+ gen_config_file()
+ {
